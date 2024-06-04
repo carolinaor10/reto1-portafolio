@@ -4,105 +4,95 @@ body {
     margin: 0;
     padding: 0;
 }
-
 header, footer {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
-
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
-
 nav ul li {
-    margin: 5px;
+    margin-right: 20px;
 }
-
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
 }
-
+nav ul li a:hover {
+    text-decoration: underline;
+}
 main {
-    padding: 10px;
+    padding: 20px;
 }
-
 section {
     background-color: #fff;
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-left: 5px solid #8E24AA; /* Color de acento morado */
 }
-
 section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 15px;
     border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     color: #8E24AA; /* Color de acento morado */
 }
-
 section p {
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 16px;
+    line-height: 1.5;
 }
-
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
 }
-
 .gallery img {
-    width: calc(50% - 10px);
+    width: 300px; 
+    height: 300px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
-
 .gallery img:hover {
     transform: scale(1.05);
 }
-
 form {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; /* Ancho máximo fijo */
+    width: 100%; /* Asegura que el formulario sea responsive */
+    margin: 0 auto; /* Centrar el formulario horizontalmente */
+    padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 form input, form textarea, form button {
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 form input:focus, form textarea:focus {
     border-color: #8E24AA; /* Color de acento morado */
     box-shadow: 0 0 5px rgba(142, 36, 170, 0.5); /* Sombra de color acento */
     outline: none;
 }
-
 form textarea {
     resize: vertical;
-    height: 100px;
+    height: 150px;
 }
-
 form button {
     background-color: #8E24AA; /* Color de acento morado */
     color: #fff;
@@ -110,153 +100,201 @@ form button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 form button:hover {
     background-color: #6A1B9A; /* Un tono más oscuro del color de acento */
 }
-
 .icon-container {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
-
 .icon-container i {
-    font-size: 20px;
+    font-size: 24px;
     color: #8E24AA; /* Color de acento morado */
 }
-
 .large-content {
     background-color: #eee;
-    margin-top: 10px;
-    padding: 10px;
+    margin-top: 20px;
+    padding: 20px;
 }
-
 .large-content h2 {
     margin-top: 0;
-    font-size: 20px;
 }
-
 .large-content p {
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-bottom: 20px;
 }
-
 .large-content img, .large-content video {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-radius: 8px;
 }
-
 .large-content iframe {
     width: 100%;
-    height: 300px;
+    height: 500px;
     border: none;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
-
 .external-script {
     background-color: #ddd;
-    margin: 10px 0;
-    padding: 10px;
+    margin: 20px 0;
+    padding: 20px;
 }
-
 .external-script iframe {
     width: 100%;
-    height: 300px;
+    height: 500px;
     border: none;
 }
-
 .external-script p {
-    font-size: 14px;
-    line-height: 1.4;
-    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
-
 .gif-gallery {
     display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
     justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    gap: 10px;
     background-color: #fff;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: auto;
-    max-height: 200px; /* Altura máxima para galería */
+}
+.gif-gallery img {
+    width: calc(33% - 10px);
+    border-radius: 8px;
 }
 
+.gif-gallery a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px; /* Ancho fijo para todas las miniaturas */
+    height: 200px; /* Altura fija para todas las miniaturas */
+}
 .gif-gallery img {
-    width: calc(33% - 5px);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 8px;
+}
+
+footer {
+    background-image: url('/imgs/gato-naranja.webp');
+    background-size: cover; /* Ajustar la imagen para que cubra todo el footer */
+    background-position: center;
+    background-repeat: no-repeat; /* Evitar la repetición de la imagen */
+    color: #fff; /* Color del texto del footer */
+    text-align: center; /* Centrar el texto */
+    padding: 20px;
+    position: relative; /* Asegura que el contenido se posicione relativo al footer */
+}
+
+
+.footer-img {
+    max-width: 100px; /* Ajustar el ancho máximo según tu preferencia */
+    height: auto;
+    display: inline-block;
+    filter: grayscale(100%);
+    padding-top: 10px;
+}
+
+.footer-img:hover  {
+    filter: grayscale(0%);
+}
+
+.footer-content {
+    position: relative; /* Asegura que el contenido esté por encima de la imagen de fondo */
+    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+}
+
+.footer-overlay {
+    position: absolute; /* Cubre todo el footer */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Crea una superposición semitransparente para mejor legibilidad */
+    z-index: 0; /* Coloca la superposición por debajo del contenido */
 }
 
 @media (max-width: 768px) {
-    nav ul li {
-        margin: 5px 0;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .gallery img {
-        width: calc(50% - 5px);
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .gif-gallery a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 100px; /* Ancho mínimo */
+        height: 100px; /* Alto fijo */
     }
 
     .gif-gallery img {
-        width: calc(50% - 5px);
+        width: 100px; 
+        height: 100px; 
     }
 
-    section h2 {
-        font-size: 18px;
+    form {
+        max-width: 90%; /* Ajustar el tamaño en pantallas más pequeñas */
     }
 
-    form input, form textarea, form button {
-        font-size: 12px;
+    footer {
+        padding: 15px;
+    }
+    .footer-content {
+        font-size: 14px; /* Ajustar el tamaño de fuente en pantallas más pequeñas */
     }
 }
 
 @media (max-width: 480px) {
     .gallery img {
-        width: 100%;
+        width: 75px; 
+        height: 75px; 
     }
 
     .gif-gallery img {
-        width: 100%;
+        width: 75px; 
+        height: 75px; 
+    }
+
+    .gif-gallery a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 100px; /* Ancho mínimo */
+        height: 100px; /* Alto fijo */
+    }
+
+    .gif-gallery img {
+        width: 75px; 
+        height: 75px; 
     }
 
     section h2 {
-        font-size: 16px;
+        font-size: 24px;
     }
 
+    form {
+        max-width: 100%; /* Ajustar el tamaño en pantallas aún más pequeñas */
+        padding: 10px; /* Reducir el padding en pantallas pequeñas */
+    }
     form input, form textarea, form button {
-        font-size: 12px;
+        padding: 10px; /* Reducir el padding de los elementos del formulario */
+        font-size: 14px; /* Ajustar el tamaño de fuente */
     }
-}
 
-/* Estilos para el footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    background-image: url('/imgs/gato-naranja.webp');
-    background-size: contain;
-    background-position: center;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-}
-
-/* Efecto al pasar el cursor sobre el footer */
-footer:hover {
-    filter: grayscale(0%);
-}
-
-/* Imagen en el footer */
-.footer-img {
-    max-width: 100px;
-    height: auto;
-    display: inline-block;
-}
-
-.footer-img:hover {
-    filter: grayscale(0%);
+    footer {
+        padding: 10px;
+    }
+    .footer-content {
+        font-size: 12px; /* Ajustar el tamaño de fuente en pantallas más pequeñas */
+    }
 }
